@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+
+    <script>
+        function exibirMenu() {
+            return prompt(
+                "===== MENU INTERATIVO =====\n" +
+                "1 -  Calcular média\n" +
+                "2 - Sair\n" +
+                "Escolha uma opção:"
+            );
+        }
+
+        function executarOpcao(opcao) {
+            switch (opcao) {
+                case "1":
+                    var nota01 = parseFloat(prompt(
+                        "Olá! Bem-vindo ao menu interativo.\n" +
+                        "Digite sua primeira nota:"
+                    ));
+                    if (isNaN(nota01)) {
+                        alert("Erro: Você deve digitar números válidos." +nota01);
+                    } if (nota01 > 10 || nota01 < 0) {
+                        alert("Erro: Você deve digitar números entre 0 e 10."+nota01);
+                    } 
+                    else {
+                        alert(`Nota registrada: `+nota01);
+
+                    }
+                    var nota02 = parseFloat(prompt(
+                        "Olá! Bem-vindo ao menu interativo.\n" +
+                        "Digite sua segunda nota:"
+                    ));
+                    if (isNaN(nota02)) {
+                        alert("Erro: Você deve digitar números válidos."+nota02);
+                    } if (nota02 > 10 || nota02 < 0) {
+                        alert("Erro: Você deve digitar números entre 0 e 10."+nota02);
+                    } 
+                    else {
+                        alert(`Nota registrada: `+nota02);
+                        let median = (nota01 + nota02)/2;
+                        if (median >= 7){
+                            alert(
+                                
+                                "Você foi aprovado!\n" + 
+                                "Sua nota média foi " + median
+                            );
+                        }if (median > 5 && median < 7){
+                            alert(
+                                "Você está de recuperação!\n" +
+                                "Sua nota média foi " + median
+                            );
+                        }else {
+                            alert(
+                                "Você foi reprovado!\n" +
+                                "Sua nota média foi " + median
+                            );
+                        }
+                        }
+                        break;
+
+
+                case "2":
+                    alert("Saindo... Até mais!");
+                    return false; // Encerra o loop
+
+                default:
+                    alert("Opção inválida. Tente novamente.");
+            }
+            return true; // Continua o loop
+        }
+
+        function iniciarMenu() {
+            let continuar = true;
+            while (continuar) {
+                let opcao = exibirMenu();
+                continuar = executarOpcao(opcao);
+            }
+        }
+
+        // Inicia o menu quando a página carregar
+        iniciarMenu();
+    </script>
+
+</head>
+<body>
+    <h1>Exercício 01</h1>
+</body>
+</html>
