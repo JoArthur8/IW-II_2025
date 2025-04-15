@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de idade</title>
+
+    <script>
+        var idade = parseInt(prompt("Me dê sua idade:"))
+
+        if (idade >= 18){
+            alert("Você é maior de idade");
+        } else if (idade <18 && idade >=0){
+            alert("Você é menor de idade");
+        } else{
+            alert("Erro");
+        }
+        // A opção de erro existe para caso algo que não seja um número natural seja posto
+    </script>
+</head>
+<body>
+    <h1>Aula IW - Exercícios</h1>
+    <p>Tarefa:
+        Escreva um programa que solicite que o usuário insira sua idade. O programa deve verificar se o usuário tem 18 anos de idade ou mais e exibir uma mensagem indicando se ele é um adulto ou um menor.
+    </p>
+</body>
+</html>
