@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>4. Mostrar/esconder elemento ao passar o mouse</p> 
+    <div id="area" style="width:200px;height:100px; background:#ccc;">Passe o mouse</div> 
+    <p id="mensagem" style="display:none;">Você passou o mouse!</p> 
+    <script> 
+        const area = document.getElementById("area"); 
+        const msg = document.getElementById("mensagem"); 
+        area.addEventListener("mouseenter", () => msg.style.display = "block"); 
+        area.addEventListener("mouseleave", () => msg.style.display = "none"); 
+    </script>
+</body>
+
+</html>

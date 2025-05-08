@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>9. Filtrar lista com termo de busca</p> 
+    <input id="filtro" placeholder="Buscar..." /> 
+    <ul id="lista"> 
+        <li>Maçã</li> 
+        <li>Banana</li> 
+        <li>Laranja</li> 
+    </ul> 
+    <script> 
+    document.getElementById("filtro").addEventListener("input", function () { 
+        const termo = this.value.toLowerCase(); 
+        const itens = document.querySelectorAll("#lista li"); 
+        itens.forEach((item) => { 
+            item.style.display = item.innerText.toLowerCase().includes (termo)? "list-item" : "none"; 
+        }); 
+    }); 
+    </script>
+</body>
+
+</html>

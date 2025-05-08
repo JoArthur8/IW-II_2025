@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p> 5. Modificar texto com entrada do usuário</p> 
+    <input id="nome" placeholder="Digite seu nome" /> 
+    <button id="mostrarNome">Mostrar</button> 
+    <p id="saudacao"></p> 
+    <script> 
+        document.getElementById("mostrarNome").addEventListener("click", function () { 
+            const nome = document.getElementById("nome").value; 
+            document.getElementById("saudacao").innerText = `Olá, ${nome}`; 
+        }); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>7. Validar formulário em tempo real</p> 
+    <input id="email" placeholder="Digite seu email" />
+    <p id="feedback"></p> 
+    <script> 
+        document.getElementById("email").addEventListener("input", function() { 
+            const valor = this.value; 
+            const feedback = document.getElementById("feedback"); 
+            if (valor.includes ("@") && valor.includes(".")) { 
+                feedback.innerText = "Email válido |"; 
+                feedback.style.color = "green"; 
+            } else { 
+                feedback.innerText = "Email inválido X"; 
+                feedback.style.color = "red"; 
+            } 
+        }); 
+    </script>
+</body>
+
+</html>

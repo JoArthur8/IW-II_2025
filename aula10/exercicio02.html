@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>2. Adicionar item a lista existente dinamicamente</p> 
+        <input id="novoItem" placeholder="Novo item" /> 
+        <button id="adicionar">Adicionar</button> 
+        <ul id="lista"></ul>
+    <script>
+        document.getElementById("adicionar").addEventListener("click", function () { 
+            const texto = document.getElementById("novoItem").value; 
+            const li = document.createElement("li"); 
+            li.innerText = texto; 
+            document.getElementById("lista").appendChild(li); 
+            document.getElementById("novoItem").value = ""; 
+        });
+    </script>
+</body>
+
+</html>

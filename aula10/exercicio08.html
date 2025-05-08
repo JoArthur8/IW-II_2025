@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>8. Animar elemento com JavaScript</p> 
+<div id="quadrado" style="width: 100px; height: 100px; background: red;position:relative;"></div> 
+<button id="mover">Mover</button> 
+    <script> 
+        document.getElementById("mover").addEventListener("click", function () { 
+            let pos = 0; 
+            const box = document.getElementById("quadrado"); 
+            const intervalo = setInterval(function () { 
+            if (pos >= 300) clearInterval(intervalo); 
+            else { 
+                pos++; 
+                box.style.left = pos + "px"; 
+            } 
+            }, 5); 
+        }); 
+    </script>
+</body>
+
+</html>

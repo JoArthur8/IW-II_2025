@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> 6. Criar menu dropdown dinâmico</p> 
+<select id="menu"></select> 
+<button id="addOpcao">Adicionar Opção</button> 
+    <script> 
+        const menu = document.getElementById("menu"); 
+        let contador = 1; 
+        document.getElementById("addOpcao").addEventListener("click", () => { 
+            const opcao = document.createElement("option"); 
+            opcao.text = "Opção" + contador++;
+            menu.add(opcao); 
+        }); 
+    </script>
+</body>
+
+</html>
