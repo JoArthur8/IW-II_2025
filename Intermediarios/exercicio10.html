@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mover elementos de uma lista</h1>
+    <ul id="lista">
+        <li>Item 1 <button onclick="mover(this, -1)">🔼</button> <button onclick="mover(this, 1)">🔽</button></li>
+        <li>Item 2 <button onclick="mover(this, -1)">🔼</button> <button onclick="mover(this, 1)">🔽</button></li>
+        <li>Item 3 <button onclick="mover(this, -1)">🔼</button> <button onclick="mover(this, 1)">🔽</button></li>
+    </ul>
+
+    <script>
+        function mover(botao, direcao) {
+            const li = botao.parentElement;
+            const lista = li.parentElement;
+            const index = Array.from(lista.children).indexOf(li);
+            const novoIndex = index + direcao;
+            if (novoIndex >= 0 && novoIndex < lista.children.length) {
+                lista.insertBefore(li, lista.children[direcao > 0 ? novoIndex + 1 : novoIndex]);
+            }
+        }
+    </script>
+</body>
+</html>

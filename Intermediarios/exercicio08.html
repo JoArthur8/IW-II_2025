@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quadrados Coloridos</h1>
+    <button onclick="gerarQuadrados()">Gerar Quadrados</button>
+    <div id="container" style="display: flex; gap: 10px; margin-top: 10px;"></div>
+
+    <script>
+        function gerarQuadrados() {
+            const container = document.getElementById("container");
+            container.innerHTML = "";
+            for (let i = 0; i < 5; i++) {
+                const div = document.createElement("div");
+                div.style.width = "50px";
+                div.style.height = "50px";
+                div.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+                container.appendChild(div);
+            }
+        }
+    </script>
+</body>
+</html>

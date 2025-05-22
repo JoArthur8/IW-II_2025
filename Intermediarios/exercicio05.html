@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Esconder e mostrar texto</h1>
+    <button onclick="alternarTexto()">Mostrar/Ocultar</button>
+    <p id="texto" style="height: 0; overflow: hidden; transition: height 0.5s;">
+        Este é um parágrafo que aparece ou desaparece.
+    </p>
+
+    <script>
+        function alternarTexto() {
+            const p = document.getElementById("texto");
+            p.style.height = p.style.height === "0px" ? "50px" : "0px";
+        }
+    </script>
+</body>
+</html>

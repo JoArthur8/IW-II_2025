@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mínimo de 5 letras no prompt</h1>
+    <input id="campo" oninput="validarCampo()" placeholder="Mínimo 5 letras">
+
+    <script>
+        function validarCampo() {
+            const input = document.getElementById("campo");
+            input.style.border = input.value.length < 5 ? "2px solid red" : "2px solid green";
+        }
+    </script>
+</body>
+</html>

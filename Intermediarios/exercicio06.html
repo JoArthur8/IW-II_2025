@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Copia e cola</h1>
+    <div id="conteudo">Texto para copiar</div>
+    <button onclick="copiar()">Copiar</button>
+
+    <script>
+        function copiar() {
+            const texto = document.getElementById("conteudo").textContent;
+            navigator.clipboard.writeText(texto).then(() => {
+                alert("Copiado!");
+            });
+        }
+    </script>
+</body>
+</html>

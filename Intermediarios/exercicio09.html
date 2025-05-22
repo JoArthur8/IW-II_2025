@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enviar imagem</h1>
+    <input type="file" accept="image/*" onchange="mostrarImagem(event)">
+    <br>
+    <img id="preview" width="200" style="margin-top: 10px; display: none;">
+
+    <script>
+        function mostrarImagem(event) {
+            const img = document.getElementById("preview");
+            img.src = URL.createObjectURL(event.target.files[0]);
+            img.style.display = "block";
+        }
+    </script>
+</body>
+</html>
