@@ -17,28 +17,32 @@ function printaralert(nome) {
     alert("Olá, " + nome.value);
 }
 function inserirTexto(){
-    document.getElementById("div-exer6").innerHTML = "Uau! Um novo texto";
+    document.getElementById("div-exer6").innerHTML = `<h4>Esse é um título</h4>\n<p>Esse é um parágrafo</p>`;
 }
 function escondetexto(){
-    document.getElementById("texto10").style = "display: none;";   
+    document.getElementById("texto05").style = "display: none;";   
 }
 function printQntDigts(){
-    texto = document.getElementById("exercicio08").innerHTML;
-    let contador = 0;
-    for (let i = 0; i < texto.length; i++) {
+    let texto = document.getElementById("exercicio08").value;
+    var contador = 0;
+
+    for (let i of texto) {
         contador++;
     }
     document.getElementById("resposta-ex8").innerHTML = contador;
 }
-var contador2 = 0;
+var contador2 = 16
+;
 function mudarTamanhoFonte(){
-    document.getElementById(texto-ex09).style = "font-size: "+contador+2+"px;";
+    var tamanhoFonte = contador2 + 2 + "px"
+    document.getElementById("texto-ex09").style.fontSize = tamanhoFonte;
+    contador2 += 2;
 }
 function escondetexto2(){
-    if (document.getElementById("texto10").style == "display: none;"){
-        document.getElementById("texto10").style = "display: auto;";
+    if (document.getElementById("texto10").style.display == "none"){
+        document.getElementById("texto10").style.display = "flex";
     }else{
-        document.getElementById("texto10").style = "display: none;";
+        document.getElementById("texto10").style.display = "none";
     }
 }
 document.addEventListener("DOMContentLoaded", function() {
