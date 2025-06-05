@@ -1,0 +1,13 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(280deg, #020202, #4a004c);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+.meio{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
