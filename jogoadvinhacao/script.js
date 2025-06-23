@@ -1,5 +1,6 @@
 var tambor_errado = Math.floor(Math.random() * 6) + 1;
 var qtd_acerto = 0;
+var recorde = qtd_acerto;
 console.log(tambor_errado)
 
 
@@ -11,6 +12,14 @@ function escondetudo(){
         document.getElementById("tambor5").style = "display: none;";
         document.getElementById("tambor6").style = "display: none;";
 }
+function mostratudo(){
+    document.getElementById("tambor1").style = "display: inline;";
+        document.getElementById("tambor2").style = "display: inline;";
+        document.getElementById("tambor3").style = "display: inline;";
+        document.getElementById("tambor4").style = "display: inline;";
+        document.getElementById("tambor5").style = "display: inline;";
+        document.getElementById("tambor6").style = "display: inline;";
+}
 function tambor1(){
     if (tambor_errado == 1){
         escondetudo();
@@ -19,6 +28,13 @@ function tambor1(){
     } else{
         qtd_acerto += 1;
         document.getElementById("tambor1").style = "display: none;";
+        document.getElementById("acertos").textContent = qtd_acerto;
+
+        if (qtd_acerto >= recorde){
+            recorde = qtd_acerto;
+            document.getElementById("recorde").textContent = recorde;
+        }
+
         document.getElementById("acertos").textContent = qtd_acerto;
         if (qtd_acerto == 5){
             escondetudo();
@@ -36,6 +52,11 @@ function tambor2(){
         qtd_acerto += 1;
         document.getElementById("tambor2").style = "display: none;";
         document.getElementById("acertos").textContent = qtd_acerto;
+
+        if (qtd_acerto >= recorde){
+            recorde = qtd_acerto;
+            document.getElementById("recorde").textContent = recorde;
+        }
         if (qtd_acerto == 5){
             escondetudo();
             alert("Você ganhou");
@@ -52,6 +73,11 @@ function tambor3(){
         qtd_acerto += 1;
         document.getElementById("tambor3").style = "display: none;";
         document.getElementById("acertos").textContent = qtd_acerto;
+
+        if (qtd_acerto >= recorde){
+            recorde = qtd_acerto;
+            document.getElementById("recorde").textContent = recorde;
+        }
         if (qtd_acerto == 5){
             escondetudo();
             alert("Você ganhou");
@@ -68,6 +94,11 @@ function tambor4(){
         qtd_acerto += 1;
         document.getElementById("tambor4").style = "display: none;";
         document.getElementById("acertos").textContent = qtd_acerto;
+
+        if (qtd_acerto >= recorde){
+            recorde = qtd_acerto;
+            document.getElementById("recorde").textContent = recorde;
+        }
         if (qtd_acerto == 5){
             escondetudo();
             alert("Você ganhou");
@@ -84,6 +115,11 @@ function tambor5(){
         qtd_acerto += 1;
         document.getElementById("tambor5").style = "display: none;";
         document.getElementById("acertos").textContent = qtd_acerto;
+
+        if (qtd_acerto >= recorde){
+            recorde = qtd_acerto;
+            document.getElementById("recorde").textContent = recorde;
+        }
         if (qtd_acerto == 5){
             escondetudo();
             alert("Você ganhou");
@@ -100,6 +136,11 @@ function tambor6(){
         qtd_acerto += 1;
         document.getElementById("tambor6").style = "display: none;";
         document.getElementById("acertos").textContent = qtd_acerto;
+
+        if (qtd_acerto >= recorde){
+            recorde = qtd_acerto;
+            document.getElementById("recorde").textContent = recorde;
+        }
         if (qtd_acerto == 5){
             escondetudo();
             alert("Você ganhou");
@@ -116,6 +157,13 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("tambor5").addEventListener("click",tambor5);
     document.getElementById("tambor6").addEventListener("click",tambor6);
 });
+
+document.getElementById("reiniciar").addEventListener("click", function () {
+    qtd_acerto = 0;
+    document.getElementById("acertos").textContent = qtd_acerto;
+    mostratudo();
+});
+
 
 
 
